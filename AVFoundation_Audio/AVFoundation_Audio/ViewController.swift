@@ -18,6 +18,7 @@ class ViewController: UIViewController {
 
    private var Player = AVAudioPlayer()
 
+    @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var netxtButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
@@ -27,6 +28,8 @@ class ViewController: UIViewController {
         super.viewWillAppear(true)
         self.netxtButton.setImage(UIImage(systemName: "forward.end.fill"), for: .normal)
         self.previousButton.setImage(UIImage(systemName: "backward.end.fill"), for: .normal)
+        self.recordButton.setImage(UIImage(systemName: "record.circle"), for: .normal)
+        self.recordButton.tintColor = .red
     }
 
     override func viewDidLoad() {
@@ -43,7 +46,6 @@ class ViewController: UIViewController {
         guard let tracks = arrayOfTracks else { return }
         if index < tracks.count - 1 {
             index += 1
-            print(index, tracks.count)
             playAudio(track: tracks[index])
         } else {
             playAudio(track: tracks[index])
@@ -69,7 +71,12 @@ class ViewController: UIViewController {
         nameLable.text = ""
     }
 
-
+    @IBAction func recordButtonTapped(_ sender: UIButton) {
+        let vc = RecordViewController()
+        vc.modalPresentationStyle = .pageSheet
+        present(vc, animated: true)
+    }
+    
     func updateArray() {
         arrayOfTracks?.append(URL.init(fileURLWithPath: Bundle.main.path(forResource: "Queen",
                                                                          ofType: "mp3")!))
