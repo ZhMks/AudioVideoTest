@@ -9,14 +9,14 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
-    
-   @IBOutlet var nameLable: UILabel!
 
-   private var arrayOfTracks: [URL]? = []
+    @IBOutlet var nameLable: UILabel!
 
-   private var index = 0
+    private var arrayOfTracks: [URL]? = []
 
-   private var Player = AVAudioPlayer()
+    private var index = 0
+
+    private var Player = AVAudioPlayer()
 
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var netxtButton: UIButton!
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
             playAudio(track: tracks[index])
         }
     }
-    
+
     @IBAction func previousButtonTapped(_ sender: UIButton) {
         guard let tracks = arrayOfTracks else { return }
         if index < tracks.count - 1 && index != 0 {
@@ -72,11 +72,22 @@ class ViewController: UIViewController {
     }
 
     @IBAction func recordButtonTapped(_ sender: UIButton) {
-        let vc = RecordViewController()
-        vc.modalPresentationStyle = .pageSheet
-        present(vc, animated: true)
+        let recordSession = AVAudioSession.sharedInstance()
+
+        do {
+            try recordSession.setActive(true)
+            recordSession.requestRecordPermission { [weak self] granted in
+                if granted {
+                    DispatchQueue.main.async {
+                        self?.presentRecordView()
+                    }
+                }
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
     }
-    
+
     func updateArray() {
         arrayOfTracks?.append(URL.init(fileURLWithPath: Bundle.main.path(forResource: "Queen",
                                                                          ofType: "mp3")!))
@@ -86,6 +97,10 @@ class ViewController: UIViewController {
                                                                          ofType: "mp3")!))
         arrayOfTracks?.append(URL.init(fileURLWithPath: Bundle.main.path(forResource: "Travis Scott feat. Young Thug, M.I.A. - FRANCHISE",
                                                                          ofType: "mp3")!))
+    }
+
+    func presentRecordView() {
+        performSegue(withIdentifier: "recordVC", sender: self)
     }
 
     func checkPlayer() {

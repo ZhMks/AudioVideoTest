@@ -14,10 +14,10 @@
 		15B5622E25DE323900D5B871 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15B5622D25DE323900D5B871 /* Assets.xcassets */; };
 		15B5623125DE323900D5B871 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15B5622F25DE323900D5B871 /* LaunchScreen.storyboard */; };
 		15B5623B25DE403800D5B871 /* Queen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 15B5623A25DE403800D5B871 /* Queen.mp3 */; };
+		B20D5A7A2B2AD9C900B910C7 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20D5A792B2AD9C900B910C7 /* RecordViewController.swift */; };
 		B2BBB1202B2704D200CB8B1B /* Travis Scott feat. Young Thug, M.I.A. - FRANCHISE.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B2BBB11D2B2704D200CB8B1B /* Travis Scott feat. Young Thug, M.I.A. - FRANCHISE.mp3 */; };
 		B2BBB1212B2704D200CB8B1B /* Travis Scott - ESCAPE PLAN.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B2BBB11E2B2704D200CB8B1B /* Travis Scott - ESCAPE PLAN.mp3 */; };
 		B2BBB1222B2704D200CB8B1B /* ROSALÍA, Travis Scott - TKN.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B2BBB11F2B2704D200CB8B1B /* ROSALÍA, Travis Scott - TKN.mp3 */; };
-		B2BBB12B2B29E10800CB8B1B /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BBB12A2B29E10800CB8B1B /* RecordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +30,10 @@
 		15B5623025DE323900D5B871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15B5623225DE323900D5B871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15B5623A25DE403800D5B871 /* Queen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Queen.mp3; sourceTree = "<group>"; };
+		B20D5A792B2AD9C900B910C7 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		B2BBB11D2B2704D200CB8B1B /* Travis Scott feat. Young Thug, M.I.A. - FRANCHISE.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Travis Scott feat. Young Thug, M.I.A. - FRANCHISE.mp3"; sourceTree = "<group>"; };
 		B2BBB11E2B2704D200CB8B1B /* Travis Scott - ESCAPE PLAN.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Travis Scott - ESCAPE PLAN.mp3"; sourceTree = "<group>"; };
 		B2BBB11F2B2704D200CB8B1B /* ROSALÍA, Travis Scott - TKN.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ROSALÍA, Travis Scott - TKN.mp3"; sourceTree = "<group>"; };
-		B2BBB12A2B29E10800CB8B1B /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +69,7 @@
 				15B5622425DE323700D5B871 /* AppDelegate.swift */,
 				15B5622625DE323700D5B871 /* SceneDelegate.swift */,
 				15B5622825DE323700D5B871 /* ViewController.swift */,
-				B2BBB12A2B29E10800CB8B1B /* RecordViewController.swift */,
+				B20D5A792B2AD9C900B910C7 /* RecordViewController.swift */,
 				15B5622A25DE323700D5B871 /* Main.storyboard */,
 				15B5622D25DE323900D5B871 /* Assets.xcassets */,
 				15B5622F25DE323900D5B871 /* LaunchScreen.storyboard */,
@@ -167,7 +167,7 @@
 				15B5622925DE323700D5B871 /* ViewController.swift in Sources */,
 				15B5622525DE323700D5B871 /* AppDelegate.swift in Sources */,
 				15B5622725DE323700D5B871 /* SceneDelegate.swift in Sources */,
-				B2BBB12B2B29E10800CB8B1B /* RecordViewController.swift in Sources */,
+				B20D5A7A2B2AD9C900B910C7 /* RecordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
